@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// this knapsack algorithm implementation using recursion
 int knapsack(vector<int> wt, vector<int> val, int w, int n)
 {
 	// Base condition
