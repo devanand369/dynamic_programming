@@ -1,9 +1,13 @@
-#include<bits/stdc++.h>
-
+//{ Driver Code Starts
+#include <bits/stdc++.h>
 using namespace std;
 
-int coinChange(int coin[], int n, int s){
-    int t[n+1][s+1];
+// } Driver Code Ends
+class Solution {
+  public:
+    long long int count(int coin[], int n, int s) {
+
+        long long int t[n+1][s+1];
     for (int i=0; i<n+1; i++){
         for (int j=0; j<s+1; j++){
             if(i==0)
@@ -23,13 +27,24 @@ int coinChange(int coin[], int n, int s){
     }
 
     return t[n][s];
+    }
+};
+
+//{ Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int sum, N;
+        cin >> sum >> N;
+        int coins[N];
+        for (int i = 0; i < N; i++) cin >> coins[i];
+        Solution ob;
+        cout << ob.count(coins, N, sum) << endl;
+    }
+
+    return 0;
 }
 
-int main()
-{
-    int coin[] = {1,2,3};
-    int sum = 5;
-    int n = sizeof(coin)/sizeof(coin[0]);
 
-    cout<<"Maximum number of ways be \t"<<coinChange(coin, n, sum);
-}
+// } Driver Code Ends
