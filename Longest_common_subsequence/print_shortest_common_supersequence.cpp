@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string printSCS(string a, string b, int m, int n){
+string printSCSS(string a, string b, int m, int n){
     int t[m+1][n+1];
 
     for(int i=0; i<m+1; i++){
@@ -58,5 +58,5 @@ int main()
     int m = a.length();
     int n = b.length();
 
-    cout<<"Print shortest common supersequence:\t"<<printSCS(a, b, m, n)<<"\n";
+    cout<<"Print shortest common supersequence:\t"<<printSCSS(a, b, m, n)<<"\n";
 }
